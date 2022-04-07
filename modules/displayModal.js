@@ -4,7 +4,7 @@ export default function displayModal(htmlContent, id, timeoutInMs=1000){
     modal.innerHTML = htmlContent;
     setTimeout(function(){
         modal.parentNode.removeChild(modal);
-    },500);
+    },timeoutInMs);
 
     document.body.appendChild(modal);
 }

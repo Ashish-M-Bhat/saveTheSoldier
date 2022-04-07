@@ -13,7 +13,7 @@ function triggerLeftFire() {
     let randomTimeoutForLeftFire =  Math.random() * (maxDelay - minDelay + 1) + minDelay ;
     //console.log(randomTimeoutForLeftFire);
     setTimeout(triggerLeftFire, randomTimeoutForLeftFire*1000)
-    
+
   }
-  
+
  export default triggerLeftFire;

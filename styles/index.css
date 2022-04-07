@@ -6,6 +6,12 @@ body {
     background-image:  url("images/forest-background.jpg");
 }
 
+body.darkMode {
+  background-image:  url("images/darkBackground.jpg");
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+
 #DoneModal{
   position:absolute;
   top:300px;

@@ -2,79 +2,53 @@
 <html>
 
 <head>
-
   <style>
- body {
-    background-image:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url('hunter-background.jpg');
-    background-repeat:no-repeat;
-}
-
-  #player{
-    position: absolute;
-    left:230px;
-    bottom:10px;
-}
-#leftBow{
-  position: absolute;
-  top:10px;
-  left:223px;
-}
-
-#leftFire{
-    width: 0; 
-    height: 0; 
-    border-top: 50px solid red;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-  
-  position: absolute;
-  top:20px;
-  left:250px;
-
-}
+    @import url("./styles/index.css");
   </style>
+
 </head>
 
 <body>
-  <img id="player" src="elephant.jpg" height="100px" width="100px" />
-  <img id="leftBow" src="bow.jpg" height="100px" width="100px"/>
-  <div id="leftFire"></div> 
+  <img id="player" src="styles/images/elephant.jpg" height="100px" width="100px" />
 
-  <script>
-    
-    document.addEventListener('keydown',function(event){
-      const keyPressed = event.key; 
-      
-      let currentStyleOfPlayer = getComputedStyle(player);      
-      switch(keyPressed){
-        case "ArrowLeft":
-                 player.style.cssText = `left:230px`;
-                 break;
-        case "ArrowRight":
-                 player.style.cssText = `left:480px`;
-              break;
-      }
-    });
-  
-    setInterval(()=>{
-      let currentFireStyle = getComputedStyle(leftFire);
-      
-      if(parseInt(currentFireStyle.top) > window.innerHeight-165){
-      
-      // If arrow has reached bottom & player is still don Left        
-        if(parseInt(getComputedStyle(player).left) < 300){
-          //alert("OUT!");
-          //window.location.reload();
-        }
-          
-        else
-          leftFire.style.top = "0px";
-      }
-      
-      else
-        leftFire.style.top= parseInt(currentFireStyle.top) + 15 + "px";
-    },30) 
-  </script>
+  <img id="leftBow" src="styles/images/bow.jpg" height=70px" width="90px"/>
+  <img id="midBow" src="styles/images/bow.jpg" height=70px" width="90px"/>
+  <img id="rightBow" src="styles/images/bow.jpg" height=70px" width="90px"/>
+
+  <div id="leftFire" class="fire"></div>
+  <div id="midFire" class="fire"></div>
+  <div id="rightFire" class="fire"></div>
+
+  <button id="stop" disabled>STOP</button>
+  <button id="start"> START </button>
+
+  <script type="module">
+      import getPositions from './modules/getPositions.js'
+
+      const externalJsFiles = ["modules/arrowKeys.js", "modules/fireEvent.js", "modules/leftFire.js", "modules/rightFire.js", "main.js"];
+
+      document.getElementById('start').addEventListener('click', function(){
+        externalJsFiles.forEach(eachScript => {
+            const script = document.createElement('script');
+            script.src = eachScript;
+            script.type='module';
+            script.defer = true;
+            document.body.appendChild(script);
+        })
+      });
+      const positions = getPositions();
+      leftBow.style.left = positions.leftBowPosition + "px";
+      leftFire.style.left = positions.leftFirePosition + "px";
+
+      midBow.style.left = positions.midBowPosition + "px";
+      midFire.style.left = positions.midFirePosition + "px";
+
+      rightBow.style.left = positions.rightBowPosition + "px";
+      rightFire.style.left = positions.rightFirePosition + "px";
+
+      player.style.left = positions.playerMidPosition + "px";
+
+</script>
 
 <br/> </br>
 </body>

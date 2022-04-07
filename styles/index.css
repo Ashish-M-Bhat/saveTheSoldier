@@ -1,0 +1,7 @@
+@import url("./bow.css");
+@import url("./fire.css");
+@import url("./player.css");
+
+body {
+    background-image:  url("images/forest-background.jpg");
+}

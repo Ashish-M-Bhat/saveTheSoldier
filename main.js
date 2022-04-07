@@ -1,6 +1,7 @@
 import triggerLeftFire from './modules/leftFire.js'
 import triggerRightFire from './modules/rightFire.js'
 import triggerMidFire from './modules/midFire.js'
+import displayModal from './modules/displayModal.js';
 
 const stop = document.querySelector("#stop");
 
@@ -11,7 +12,7 @@ let startTime = performance.now();
   setTimeout(()=>triggerLeftFire(), Math.random()*1000+1);
   setTimeout(()=> triggerMidFire(), (Math.random()*1000)+11);
   setTimeout(()=>triggerRightFire(), Math.random()*1000+5);
-  
+
   // Enable the STOP button
   stop.disabled=false;
 
@@ -19,27 +20,10 @@ let startTime = performance.now();
 
 (function stopGame(){
   stop.addEventListener('click', function(event){
-    (function tempAlert(){
-      var el = document.createElement("div");
-      //el.setAttribute("style","position:absolute;top:500px;left:500px;background-color:red;height:500px;width:500px;color:white;");
-      el.style.cssText = `position:absolute;
-                          top:300px;
-                          left:800px;
-                          background-color:red;
-                          height:300px;
-                          width:500px;
-                          color:white`;
 
-      el.innerHTML = `OUT!\n Pointes: ${Math.ceil(performance.now()-startTime)/100}`;
-      setTimeout(function(){
-        el.parentNode.removeChild(el);
-      },3000);
+    let htmlContent = `<div style="text-align:center;position:absolute; top:87px;left:225px">OUT! </div> <div style="text-align:center;position:absolute; top:200px;left:217px  "> Points: ` + Math.ceil((performance.now()-startTime)/100) + `</div>`;
 
-      document.body.appendChild(el);
-      })();
-
-      //location.reload();
-      setTimeout(()=> location.reload(), 1000);    
-  });  
+    displayModal(htmlContent, 'DoneModal', 500);
+    setTimeout(()=> location.reload(), 500);
+  });
 })();
-

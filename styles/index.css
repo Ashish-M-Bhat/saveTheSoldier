@@ -5,3 +5,13 @@
 body {
     background-image:  url("images/forest-background.jpg");
 }
+
+#DoneModal{
+  position:absolute;
+  top:300px;
+  left:800px;
+  background-color:red;
+  height:300px;
+  width:500px;
+  color:white;
+}

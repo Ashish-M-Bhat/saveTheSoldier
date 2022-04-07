@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <img id="player" src="styles/images/elephant.jpg" height="100px" width="100px" />
+  <img id="player" src="styles/images/elephant.jpg" height="90px" width="90px" />
 
   <img id="leftBow" src="styles/images/bow.jpg" height=70px" width="90px"/>
   <img id="midBow" src="styles/images/bow.jpg" height=70px" width="90px"/>
@@ -21,35 +21,15 @@
 
   <button id="stop" disabled>STOP</button>
   <button id="start"> START </button>
+  <input type="checkbox" id="darkModeToggle"/><label for="darkModeToggle" style="color:white"> Dark Mode </label>
 
-  <script type="module">
-      import getPositions from './modules/getPositions.js'
+  <script type="module" src="modules/setInitialPositions.js"></script>
+  <script type="module" src="modules/darkModeToggle.js"></script>
+  <script type="module" src="modules/loadAllModulesOnStart.js"></script>
 
-      const externalJsFiles = ["modules/arrowKeys.js", "modules/fireEvent.js", "modules/leftFire.js", "modules/rightFire.js", "main.js"];
-
-      document.getElementById('start').addEventListener('click', function(){
-        externalJsFiles.forEach(eachScript => {
-            const script = document.createElement('script');
-            script.src = eachScript;
-            script.type='module';
-            script.defer = true;
-            document.body.appendChild(script);
-        })
-      });
-      const positions = getPositions();
-      leftBow.style.left = positions.leftBowPosition + "px";
-      leftFire.style.left = positions.leftFirePosition + "px";
-
-      midBow.style.left = positions.midBowPosition + "px";
-      midFire.style.left = positions.midFirePosition + "px";
-
-      rightBow.style.left = positions.rightBowPosition + "px";
-      rightFire.style.left = positions.rightFirePosition + "px";
-
-      player.style.left = positions.playerMidPosition + "px";
-
+<script>
+   window.addEventListener('resize', ()=> {location.reload()});
 </script>
-
 <br/> </br>
 </body>
 

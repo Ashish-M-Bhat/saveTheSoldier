@@ -27,5 +27,3 @@ document.addEventListener('keydown',function(event){
 
     }
   });
-
-  window.addEventListener('resize', ()=> {console.log("hey"); location.reload()});

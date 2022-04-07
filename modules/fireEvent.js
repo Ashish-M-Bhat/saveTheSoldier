@@ -7,11 +7,11 @@ export default function fireEvent(elementToBeFired){
         const positions = getPositions();
 
         // If arrow has reached bottom
-        if(parseInt(currentFireStyle.top) > window.innerHeight-165){
-        // Player is still on the same side        
+        if(parseInt(currentFireStyle.top) > window.innerHeight-145){
+        // Player is still on the same side
           if((
-            (elementToBeFired.id === 'leftFire') && Math.abs(parseInt(getComputedStyle(player).left) - positions.playerLeftPosition) < 10) || 
-              ((elementToBeFired.id === 'midFire') && Math.abs(parseInt(getComputedStyle(player).left) - positions.playerMidPosition) < 10) || 
+            (elementToBeFired.id === 'leftFire') && Math.abs(parseInt(getComputedStyle(player).left) - positions.playerLeftPosition) < 10) ||
+              ((elementToBeFired.id === 'midFire') && Math.abs(parseInt(getComputedStyle(player).left) - positions.playerMidPosition) < 10) ||
               ((elementToBeFired.id === 'rightFire') && Math.abs(parseInt(getComputedStyle(player).left) - positions.playerRightPosition) < 10)
           )
           {
@@ -22,23 +22,24 @@ export default function fireEvent(elementToBeFired){
             //if(confirm("OUT! Restart?"))
                 //location.reload();
             //console.log(parseInt(getComputedStyle(player).left));
-            
+
           }
-          // else if the elefante isn't hit by an arrow & arrow HASN'T reached the dead bottom, move it down. 
-          else if(parseInt(currentFireStyle.top) < window.innerHeight){
+          // else if the elefante isn't hit by an arrow & arrow HASN'T reached the dead bottom, move it down
+          // Notice the inerHeight/10 being subracted. This it to prevent the window being scrolled down for a split second each time the fire reaches the bootom
+          else if(parseInt(currentFireStyle.top) < window.innerHeight - innerHeight/10) {
             elementToBeFired.style.top= parseInt(currentFireStyle.top) + (window.innerHeight/68.6) + "px";
           }
-          // else, reset it to the top. 
+          // else, reset it to the top.
           else{
             elementToBeFired.style.top = "0px";
           }
-          
-                  
+
+
         }
         // If the arrow has reached the bottom stage.
         else
            elementToBeFired.style.top= parseInt(currentFireStyle.top) + (window.innerHeight/68.6) + "px";
-      },30); 
+      },30);
 }
 
 /* Note : The bottom stage has two parts:

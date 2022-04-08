@@ -3,7 +3,9 @@ import triggerRightFire from './modules/rightFire.js'
 import triggerMidFire from './modules/midFire.js'
 import displayModal from './modules/displayModal.js';
 
+const start = document.querySelector("#start");
 const stop = document.querySelector("#stop");
+
 
 let startTime = performance.now();
 
@@ -13,8 +15,9 @@ let startTime = performance.now();
   setTimeout(()=> triggerMidFire(), (Math.random()*1000)+11);
   setTimeout(()=>triggerRightFire(), Math.random()*1000+5);
 
-  // Enable the STOP button
-  stop.disabled=false;
+  // Unhide the STOP button & Hide the START button
+  stop.hidden=false;
+  start.hidden=true;
 
 })();
 

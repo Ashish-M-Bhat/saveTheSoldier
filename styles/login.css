@@ -5,19 +5,36 @@ body{
 form{
     display: flex;
     flex-flow: column;
-    justify-content: space-around;
-    border: 2px solid aqua;
-    width:20%;
+    justify-content: space-between;
+
+    border: 30px solid rgb(72, 9, 124);
+    width:25%;
     margin: auto;
-    margin-top:300px;
-    background-color: aqua;
-    border-radius: 15px;
+
+    position: absolute;
+    top:22%;
+    left:35%;
+    background-color: rgb(72, 9, 124);
+    border-radius: 10px;
 }
 
 input,button{
-    padding: 10px;
-    margin: 10px;
+    padding: 8px;
+    margin: 5%;
 }
 button{
     cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+#createAccountOrAlreadyHaveAccount{
+    top: 65%;
+    left: 30%;
+    position: absolute;
+    width: 28%;
+    border: 1px solid rgb(72, 9, 124);
+}
+h1{
+    text-align: center;
+    color:white;
 }

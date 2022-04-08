@@ -21,3 +21,21 @@ body.darkMode {
   width:500px;
   color:white;
 }
+#menuBar{
+  position: absolute;
+  top:50%;
+  display: flex;
+  width:6%;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: space-around;
+}
+.menuBarItems{
+  margin-bottom: 12px;
+  height:30px;
+  background-color: silver;
+  cursor: pointer;
+}
+#darkModeToggle{
+  margin-left: 10px;
+}

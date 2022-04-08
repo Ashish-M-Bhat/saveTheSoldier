@@ -1,0 +1,23 @@
+body{
+    background-color: silver;
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    border: 2px solid aqua;
+    width:20%;
+    margin: auto;
+    margin-top:300px;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+input,button{
+    padding: 10px;
+    margin: 10px;
+}
+button{
+    cursor: pointer;
+}

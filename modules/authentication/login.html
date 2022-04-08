@@ -1,18 +1,28 @@
 <html>
     <head>
         <title>
-            LOGin
+            Elefante
         </title>
         <style>
             @import url("../../styles/login.css");
           </style>
     </head>
     <body>
-        <form>
-            <input type="text" id="email" placeholder="email">
-            <input type="password" id="password" placeholder="Password">
-            <button id="submitLogin">Login</button>
+        <form id="loginForm">
+            <h1>Login</h1>
+            <input type="text" id="loginEmail" placeholder="email">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button id="loginHandler">Login</button>
         </form>
+        <button id="createAccountOrAlreadyHaveAccount">Create an Account </button>
+
+        <form id="signupForm" style="display:none">
+            <h1>Sign Up</h1>
+            <input type="text" id="signupEmail" placeholder="email">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <button id="signupHandler">Sign Up</button>
+        </form>
+
         <script>
             if(localStorage.getItem('idToken'))
                 location.href = "../../";

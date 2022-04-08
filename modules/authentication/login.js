@@ -29,27 +29,27 @@ function loginOrSignup(event){
       .catch((e)=> alert(e));
 }
 
-const loginHandler = document.getElementById('loginHandler');
-const signupHandler = document.getElementById('signupHandler');
-const createAccountOrAlreadyHaveAccount = document.getElementById('createAccountOrAlreadyHaveAccount');
 const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
+
+const loginHandler = document.getElementById('loginHandler');
+const signupHandler = document.getElementById('signupHandler');
+
+const createAccount = document.getElementById('createAccount');
+const alreadyHaveAccount = document.getElementById('alreadyHaveAccount');
 
 loginHandler.addEventListener('click', loginOrSignup);
 signupHandler.addEventListener('click', loginOrSignup);
 
-createAccountOrAlreadyHaveAccount.addEventListener('click', (event)=>{
+createAccount.onclick = (event)=>{
     event.preventDefault();
-    let currentPage = getComputedStyle(signupForm).display === 'none'?'loginPage':'signupPage';
-    if(currentPage === 'loginPage'){
-        createAccountOrAlreadyHaveAccount.textContent = 'Already have an Account?';
-        loginForm.style.display = 'none';
-        signupForm.style.display = '';
-    }
-    else if(currentPage === 'signupPage'){
-        createAccountOrAlreadyHaveAccount.textContent = 'Create an Acount';
-        loginForm.style.display = '';
-        signupForm.style.display = 'none';
-    }
-});
+    loginForm.style.display = 'none';
+    signupForm.style.display = '';
+};
 
+alreadyHaveAccount.onclick = (event)=>{
+    event.preventDefault();
+
+    loginForm.style.display = '';
+    signupForm.style.display = 'none';
+};

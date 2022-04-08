@@ -4,7 +4,7 @@ body{
 
 form{
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     justify-content: space-between;
 
     border: 30px solid rgb(72, 9, 124);
@@ -26,13 +26,18 @@ button{
     cursor: pointer;
     margin-top: 5%;
     margin-bottom: 10%;
+    background-color: rgb(165, 83, 231);
+    margin: auto;
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
-#createAccountOrAlreadyHaveAccount{
-    top: 65%;
-    left: 30%;
-    position: absolute;
-    width: 28%;
+a{
+    font-size: large;
+    text-decoration: none;
+    margin: auto;
     border: 1px solid rgb(72, 9, 124);
+    color:rgb(121, 28, 197);;
 }
 h1{
     text-align: center;

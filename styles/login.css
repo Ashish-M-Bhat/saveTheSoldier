@@ -26,18 +26,26 @@ button{
     cursor: pointer;
     margin-top: 5%;
     margin-bottom: 10%;
-    background-color: rgb(165, 83, 231);
     margin: auto;
     width: 50%;
+    height: 50px;
     margin-top: 5%;
     margin-bottom: 10%;
+    background-color: silver;
+    color:rgb(121, 28, 197);
 }
 a{
     font-size: large;
     text-decoration: none;
     margin: auto;
     border: 1px solid rgb(72, 9, 124);
-    color:rgb(121, 28, 197);;
+    color:rgb(121, 28, 197);
+}
+button:hover{
+    width: 60%;
+    height:60px;
+    background-color: rgb(165, 83, 231);
+    color:white;
 }
 h1{
     text-align: center;

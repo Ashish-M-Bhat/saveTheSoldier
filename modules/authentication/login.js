@@ -1,3 +1,12 @@
+const loginForm = document.getElementById('loginForm');
+const signupForm = document.getElementById('signupForm');
+
+const loginHandler = document.getElementById('loginHandler');
+const signupHandler = document.getElementById('signupHandler');
+
+const createAccount = document.getElementById('createAccount');
+const alreadyHaveAccount = document.getElementById('alreadyHaveAccount');
+
 function loginOrSignup(event){
     event.preventDefault();
 
@@ -24,19 +33,12 @@ function loginOrSignup(event){
       })
       .then(data => {
         localStorage.setItem('idToken', data.idToken);
-        location.href = "../../";
+        localStorage.setItem('userId', data.email.split('@')[0]);
+        location.href = "../Points/showUserPoints.html";
       })
       .catch((e)=> alert(e));
 }
 
-const loginForm = document.getElementById('loginForm');
-const signupForm = document.getElementById('signupForm');
-
-const loginHandler = document.getElementById('loginHandler');
-const signupHandler = document.getElementById('signupHandler');
-
-const createAccount = document.getElementById('createAccount');
-const alreadyHaveAccount = document.getElementById('alreadyHaveAccount');
 
 loginHandler.addEventListener('click', loginOrSignup);
 signupHandler.addEventListener('click', loginOrSignup);

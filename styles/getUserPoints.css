@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+}
+#pointsTableAndHomeButton{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    align-items:center;
+}
+#gotToHomeFromShowUserPoints{
+    align-self:center;
+    cursor: pointer;
+}
+
+#userPointsTableDiv{
+    width: 25%;
+    margin: auto;
+}
+
+table {
+    position:relative;
+    left:-8%;
+    border: 5px solid rgb(217, 255, 0);
+    border-collapse: collapse;
+    background-color:darkgrey;
+    width:110%;
+    height:30px;
+
+}
+
+th,td{
+    border:2px solid rgba(20, 20, 233, 0.493);
+    height:50px;
+    text-align: center;
+    color:white;
+}
+td:hover,th:hover {background-color: grey;}
+p{
+    position:relative;
+    left:31%;
+    color:white;
+    font-size:30px;
+}

@@ -1,0 +1,24 @@
+table {
+    width:20%;
+    position:relative;
+    border: 5px solid rgb(217, 255, 0);
+    border-collapse: collapse;
+    background-color:darkgrey;
+    width:110%;
+    height:30px;
+
+}
+
+th,td{
+    border:2px solid rgba(20, 20, 233, 0.493);
+    height:50px;
+    text-align: center;
+    color:white;
+}
+td:hover,th:hover {background-color: grey;}
+p{
+    position: relative;
+    left: 7.5%;
+    color: white;
+    font-size: 3vh;
+}

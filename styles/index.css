@@ -1,6 +1,7 @@
 @import url("./bow.css");
 @import url("./fire.css");
 @import url("./player.css");
+@import url("./leaderBoard.css");
 
 body {
     background-image:  url("images/forest-background.jpg");
@@ -23,19 +24,22 @@ body.darkMode {
 }
 #menuBar{
   position: absolute;
-  top:50%;
+  top:20%;
   display: flex;
-  width:6%;
+  width:8%;
   flex-flow: column;
   justify-content: space-around;
   align-items: space-around;
 }
 .menuBarItems{
-  margin-bottom: 12px;
+
+  margin-bottom: 15%;
   height:30px;
   background-color: silver;
   cursor: pointer;
+  width:70%;
 }
 #darkModeToggle{
-  margin-left: 10px;
+  width: 36px;
+  height: 21px;
 }

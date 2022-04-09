@@ -13,7 +13,6 @@ export default function displayUserPoints(userId, userPointsArray){
             const tr = document.createElement('tr');
             tr.innerHTML = `<td>${index}</td><td>${eachpointEntry.points}</td>`;
             table.appendChild(tr);
-            console.log("index: ",index, "points: ", eachpointEntry.points );
         });
         userPointsTableDiv.style.cssText=`order:2`;
     }

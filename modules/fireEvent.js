@@ -15,14 +15,9 @@ export default function fireEvent(elementToBeFired){
               ((elementToBeFired.id === 'rightFire') && Math.abs(parseInt(getComputedStyle(player).left) - positions.playerRightPosition) < 10)
           )
           {
-            // console.log(parseInt(getComputedStyle(player).left), (parseInt(getComputedStyle(player).left) - positions.playerLeftPosition) < 10);
-            //document.getElementById('displayPoints').innerHTML = points;
-            document.querySelector("#stop").dispatchEvent(new Event('click'));
-            //console.timeEnd("started")
-            //if(confirm("OUT! Restart?"))
-                //location.reload();
-            //console.log(parseInt(getComputedStyle(player).left));
-
+            const stopButton = document.querySelector("#stop")
+            if(stopButton)
+              stopButton.dispatchEvent(new Event('click'));
           }
           // else if the elefante isn't hit by an arrow & arrow HASN'T reached the dead bottom, move it down
           // Notice the inerHeight/10 being subracted. This it to prevent the window being scrolled down for a split second each time the fire reaches the bootom

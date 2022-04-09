@@ -5,12 +5,10 @@ import displayUserPoints from "./displayUserPoints.js";
     const userId = localStorage.getItem('userId');
 
     const transformData = (dataFromPointsDB) =>{
-        let id = 0, userPointsArray;
-        // Get the user's entry from the DB
+        const userPointsArray = [];
         for(let key in dataFromPointsDB){
-            if(key === userId){
-                userPointsArray = dataFromPointsDB[key];
-                break;
+            if(dataFromPointsDB[key].userId === userId){
+                userPointsArray.push(dataFromPointsDB[key])
             }
         }
 

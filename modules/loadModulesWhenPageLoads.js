@@ -1,4 +1,4 @@
-const externalJsFiles = ["modules/setInitialPositions.js", "modules/darkModeToggle.js", "modules/leftFire.js", "modules/authentication/logout.js", "modules/Points/getUserPoints.js"];
+const externalJsFiles = ["modules/setInitialPositions.js", "modules/darkModeToggle.js", "modules/leftFire.js", "modules/authentication/logout.js"];
 
 externalJsFiles.forEach(eachScript => {
     const script = document.createElement('script');

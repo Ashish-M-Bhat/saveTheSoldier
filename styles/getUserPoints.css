@@ -34,7 +34,7 @@ th,td{
     text-align: center;
     color:white;
 }
-td:hover,th:hover {background-color: grey;}
+tr:hover{background-color: grey;}
 p{
     position:relative;
     left:31%;

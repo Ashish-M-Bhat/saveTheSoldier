@@ -10,7 +10,7 @@ const displayLeaderBoard = (allUsersPointsArray) =>{
         const tr = document.createElement('tr');
         tr.innerHTML = `<td>${eachpointEntry.userId}</td><td>${eachpointEntry.points}</td>`;
         if(localStorage.getItem('userId') && localStorage.getItem('userId')=== eachpointEntry.userId)
-        tr.style.cssText = `background-color:red;`
+        tr.classList.add('highlightCurrentUserOnLeaderBoard');
         table.appendChild(tr);
     });
 

@@ -1,6 +1,8 @@
-const externalJsFiles = ["modules/arrowKeys.js", "modules/fireEvent.js", "modules/leftFire.js", "modules/rightFire.js", "main.js"];
 
-document.getElementById('start').addEventListener('click', function(){
+export default function loadModulesonStart(){
+  const externalJsFiles = ["modules/arrowKeys.js", "modules/fireEvent.js", "modules/leftFire.js", "modules/rightFire.js"];
+
+  console.log('Loading defered scripts...');
   externalJsFiles.forEach(eachScript => {
       const script = document.createElement('script');
       script.src = eachScript;
@@ -8,4 +10,4 @@ document.getElementById('start').addEventListener('click', function(){
       script.defer = true;
       document.body.appendChild(script);
   })
-});
+}

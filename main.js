@@ -1,9 +1,9 @@
-import triggerLeftFire from './modules/leftFire.js'
-import triggerRightFire from './modules/rightFire.js'
-import triggerMidFire from './modules/midFire.js'
+import triggerLeftFire from './modules/FireEvents/leftFire.js'
+import triggerRightFire from './modules/FireEvents/rightFire.js'
+import triggerMidFire from './modules/FireEvents/midFire.js'
 import displayModal from './modules/displayModal.js';
 import addPointsToDB from './modules/Points/addPointsToDB.js';
-import loadModulesonStart from './modules/loadModulesOnStart.js';
+import loadModulesonStart from './modules/scriptLoaders/loadModulesOnStart.js';
 
 const start = document.querySelector("#start");
 const stop = document.querySelector("#stop");

@@ -1,4 +1,4 @@
-import getPositions from "./getPositions.js";
+import getPositions from "./Positions/getPositions.js";
 
 const player = document.querySelector("#player");
 

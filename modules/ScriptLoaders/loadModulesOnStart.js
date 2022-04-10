@@ -1,6 +1,6 @@
 
 export default function loadModulesonStart(){
-  const externalJsFiles = ["modules/arrowKeys.js", "modules/fireEvent.js", "modules/leftFire.js", "modules/rightFire.js"];
+  const externalJsFiles = ["modules/arrowKeys.js", "modules/FireEvents/fireEvent.js", "modules/FireEvents/leftFire.js", "modules/FireEvents/midFire.js", "modules/FireEvents/rightFire.js"];
 
   console.log('Loading defered scripts...');
   externalJsFiles.forEach(eachScript => {

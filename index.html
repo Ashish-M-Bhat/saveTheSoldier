@@ -25,7 +25,7 @@
     <button id="stop" class="menuBarItems" hidden>STOP</button>
     <button id="start" class="menuBarItems" > START </button>
     <label for="darkModeToggle" style="color:white">Dark Mode<input type="checkbox" id="darkModeToggle"  class="menuBarItems" /></label>
-    <button id="login" class="menuBarItems"  onclick="location.href='./modules/authentication/login.html';"> LOGIN </button>
+    <button id="login" class="menuBarItems"  onclick="location.href='./modules/Authentication/login.html';"> LOGIN </button>
     <button id="profile" class="menuBarItems" hidden> Profile </button>
     <button id="logout" class="menuBarItems" hidden> LOGOUT </button>
 
@@ -34,8 +34,8 @@
     </div>
   </div>
 
-  <script type="module" src="modules/loadModulesWhenPageLoads.js"></script>
-  <script type="module" src="modules/loadModulesOnStart.js"></script>
+  <script type="module" src="modules/scriptLoaders/loadModulesWhenPageLoads.js"></script>
+  <script type="module" src="modules/scriptLoaders/loadModulesOnStart.js"></script>
 
 <script>
    window.addEventListener('resize', ()=> {location.reload()});

@@ -1,3 +1,5 @@
+import displayModal from '../displayModal.js';
+
 const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
 
@@ -24,11 +26,9 @@ function loginOrSignup(event){
       .then(response => {
         if(response.ok){
           return response.json();
-
         }
         else{
-          alert('fail');
-
+          throw new Error("Failed");
         }
       })
       .then(data => {
@@ -36,7 +36,10 @@ function loginOrSignup(event){
         localStorage.setItem('userId', data.email.split('@')[0]);
         location.href = "../Points/showUserPoints.html";
       })
-      .catch((e)=> alert(e));
+      .catch((e)=> {
+        const errorMessage = `<div style="text-align:center;position:absolute; top:40%;left:40%">Failed! </div>`
+        displayModal(errorMessage, 'ErrorModal', 1500)}
+        );
 }
 
 

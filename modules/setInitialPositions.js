@@ -19,3 +19,24 @@ rightBow.style.left = positions.rightBowPosition + "px";
 rightFire.style.left = positions.rightFirePosition + "px";
 
 player.style.left = positions.playerMidPosition + "px";
+
+// Code for toggleMenuBar
+
+const toggleMenuBar = document.querySelector('#toggleMenuBar');
+const menuBar = document.querySelector('#menuBar');
+
+let initialToggleMarginTop = getComputedStyle(toggleMenuBar).marginTop;
+let initialMenuDisplayType = getComputedStyle(menuBar).display;
+toggleMenuBar.addEventListener('click', function(event){
+
+    if(getComputedStyle(menuBar).display === 'flex'){
+        menuBar.style.display = 'none';
+        toggleMenuBar.innerHTML = '&#x25B6';
+        toggleMenuBar.style.marginTop= '20%';
+    }
+    else if(getComputedStyle(menuBar).display === 'none'){
+        menuBar.style.display = initialMenuDisplayType;
+        toggleMenuBar.innerHTML = '&#x25C0';
+        toggleMenuBar.style.marginTop= initialToggleMarginTop;
+    }
+})

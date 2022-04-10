@@ -15,10 +15,19 @@ th,td{
     text-align: center;
     color:white;
 }
-td:hover,th:hover {background-color: grey;}
+tr:hover {background-color: grey;}
 p{
     position: relative;
     left: 7.5%;
-    color: white;
     font-size: 3vh;
+}
+
+.darkMode{
+    color:white;
+}
+.highlightCurrentUserOnLeaderBoard{
+    background-color: rgb(245, 0, 0);
+}
+.highlightCurrentUserOnLeaderBoard:hover{
+    background-color: silver;
 }

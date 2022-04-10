@@ -17,4 +17,7 @@ logout.addEventListener('click', function(event){
              login.hidden = false;
              logout.hidden = !login.hidden;
              profile.hidden = !login.hidden;
+
+             // Force a reolad, since the highlighting of leaderBoard needs to take place once userId is removed from localStorage
+             location.reload();
          });

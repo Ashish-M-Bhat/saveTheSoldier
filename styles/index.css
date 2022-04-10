@@ -5,6 +5,7 @@
 
 body {
     background-image:  url("images/forest-background.jpg");
+    color:blue;
 }
 
 body.darkMode {
@@ -13,14 +14,21 @@ body.darkMode {
   background-size:100%;
 }
 
-#DoneModal{
-  position:absolute;
-  top:300px;
-  left:800px;
-  background-color:red;
-  height:300px;
-  width:500px;
+.darkMode{
   color:white;
+}
+
+#toggleMenuBar{
+  margin-top: 4%;
+  height:30px;
+  background-color: transparent;
+  cursor: pointer;
+  color:blue;
+  border: 1px solid transparent;
+  font-size: 4vh;
+}
+#toggleMenuBar:hover{
+  color: white;
 }
 #menuBar{
   position: absolute;
@@ -32,14 +40,32 @@ body.darkMode {
   align-items: space-around;
 }
 .menuBarItems{
-
   margin-bottom: 15%;
-  height:30px;
+  height:3vh;
   background-color: silver;
   cursor: pointer;
   width:70%;
+  color:white;
 }
+.menuBarItems:hover{
+  width:80%;
+  height:5vh;
+  margin-left: 0.5vh;
+  margin-top: 1vh;
+}
+
 #darkModeToggle{
   width: 36px;
   height: 21px;
 }
+
+#DoneModal{
+  position:absolute;
+  top:300px;
+  left:800px;
+  background-color:red;
+  height:300px;
+  width:500px;
+  color:white;
+}
+

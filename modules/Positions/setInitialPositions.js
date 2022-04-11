@@ -23,20 +23,36 @@ player.style.left = positions.playerMidPosition + "px";
 // Code for toggleMenuBar
 
 const toggleMenuBar = document.querySelector('#toggleMenuBar');
-const menuBar = document.querySelector('#menuBar');
+const stop = document.querySelector('#stop');
 
 let initialToggleMarginTop = getComputedStyle(toggleMenuBar).marginTop;
-let initialMenuDisplayType = getComputedStyle(menuBar).display;
 toggleMenuBar.addEventListener('click', function(event){
 
-    if(getComputedStyle(menuBar).display === 'flex'){
-        menuBar.style.display = 'none';
-        toggleMenuBar.innerHTML = '&#x25B6';
+    // If leaderBoard is visible, this means we are at home page. So hide the elements except STOP
+
+    if(getComputedStyle(leaderBoard).display !== 'none'){
+        for(let eachElementToBeHidden of menuBar.children){
+            // If start was clicked, make the stop button visible & hide the toggleMenuBar button
+            if(startHasBeenClicked){
+                stop.hidden=false;
+                stop.style.marginTop= '25vh';
+                toggleMenuBar.hidden = true;
+            }
+            if(eachElementToBeHidden !== stop)
+                eachElementToBeHidden.style.display = 'none';
+        }
+        toggleMenuBar.innerHTML = '&#x25B6'; // >
+        // Bring toggleMenuBar to ~ middle of the page, vertically
         toggleMenuBar.style.marginTop= '20%';
     }
-    else if(getComputedStyle(menuBar).display === 'none'){
-        menuBar.style.display = initialMenuDisplayType;
-        toggleMenuBar.innerHTML = '&#x25C0';
+    // Bring back all of them except stop, ofcourse!
+    else if(getComputedStyle(leaderBoard).display === 'none'){
+        for(let eachElementToBeShown of menuBar.children){
+            if(eachElementToBeShown !== stop)
+                eachElementToBeShown.style.display = '';
+        }
+        stop.hidden = true;
+        toggleMenuBar.innerHTML = '&#x25C0'; // <
         toggleMenuBar.style.marginTop= initialToggleMarginTop;
     }
 })

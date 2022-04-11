@@ -10,8 +10,9 @@ const stop = document.querySelector("#stop");
 let startTime;
 
 start.addEventListener('click', function(event){
+  startHasBeenClicked = true;
   // Hide the menu bar
-  document.getElementById('toggleMenuBar').dispatchEvent(new Event('click'));
+  toggleMenuBar.dispatchEvent(new Event('click'));
 
   loadModulesonStart();
   console.log("Game has Begun");
@@ -27,6 +28,9 @@ start.addEventListener('click', function(event){
 
 
 function stopGame(){
+
+  [leftFire, midFire, rightFire, leftBow, midBow, rightBow, player].forEach(e => e.hidden=true)
+
   // remove the event listener to avoid multiple triggering due to the arrows still fired.
   stop.removeEventListener('click', stopGame);
 

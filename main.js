@@ -13,6 +13,7 @@ start.addEventListener('click', function(event){
   startHasBeenClicked = true;
   // Hide the menu bar
   toggleMenuBar.dispatchEvent(new Event('click'));
+  [leftFire, midFire, rightFire, leftBow, midBow, rightBow, player].forEach(e => e.classList.remove('beforeStart'));
 
   loadModulesonStart();
   console.log("Game has Begun");

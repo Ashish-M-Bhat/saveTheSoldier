@@ -14,8 +14,8 @@ body.darkMode {
   background-size:100%;
 }
 
-.darkMode{
-  color:white;
+.fire.darkMode{
+  background-color:goldenrod;
 }
 
 #toggleMenuBar{

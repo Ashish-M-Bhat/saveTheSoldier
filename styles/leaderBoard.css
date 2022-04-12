@@ -1,9 +1,9 @@
 table {
     width:20%;
     position:relative;
-    border: 5px solid rgb(217, 255, 0);
+    border: 3px solid rgb(217, 255, 0);
     border-collapse: collapse;
-    background-color:darkgrey;
+    background: linear-gradient(grey,silver,silver,grey);
     width:110%;
     height:30px;
 

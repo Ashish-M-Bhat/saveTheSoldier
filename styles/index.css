@@ -14,10 +14,6 @@ body.darkMode {
   background-size:100%;
 }
 
-.fire.darkMode{
-  background-color:goldenrod;
-}
-
 #toggleMenuBar{
   margin-top: 4%;
   height:30px;
@@ -42,7 +38,8 @@ body.darkMode {
 .menuBarItems{
   margin-bottom: 15%;
   height:3vh;
-  background-color: silver;
+  background: linear-gradient(grey,silver,grey);
+  transition: all .6s cubic-bezier(.19,1,.22,1);
   cursor: pointer;
   width:70%;
   color:white;
@@ -57,6 +54,11 @@ body.darkMode {
 #darkModeToggle{
   width: 36px;
   height: 21px;
+}
+
+#start,#stop, #login{
+  width:80%;
+  margin:1vh;
 }
 
 #DoneModal{

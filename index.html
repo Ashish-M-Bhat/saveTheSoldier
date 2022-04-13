@@ -31,17 +31,20 @@
     <button id="logout" class="menuBarItems" hidden> LOGOUT </button>
 
     <div id="leaderBoard">
-      <p>LeaderBoard</p>
+      <p style="text-shadow: 2px 2px 5px">LeaderBoard</p>
     </div>
   </div>
 
   <script type="module" src="modules/scriptLoaders/loadModulesWhenPageLoads.js"></script>
   <script type="module" src="modules/scriptLoaders/loadModulesOnStart.js"></script>
+  <audio src="styles/codmw.mp3" loop id="backgroundMusic"></audio>
 
-<script>
+  <script>
+  window.onload = () => backgroundMusic.play();
   // TODO: Throttling/Debouncing
    window.addEventListener('resize', ()=> {location.reload()});
    var startHasBeenClicked = false;
+
 </script>
 <br/> </br>
 </body>

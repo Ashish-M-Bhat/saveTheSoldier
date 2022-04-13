@@ -11,6 +11,12 @@ let startTime;
 
 start.addEventListener('click', function(event){
   startHasBeenClicked = true;
+  const bgMusic = document.createElement('audio');
+  backgroundMusic.muted = true;
+  bgMusic.src='./styles/codmwBlackout.mp3';
+  bgMusic.loop = true;
+  document.body.appendChild(bgMusic);
+  bgMusic.play();
   // Hide the menu bar
   toggleMenuBar.dispatchEvent(new Event('click'));
   [leftFire, midFire, rightFire, leftBow, midBow, rightBow, player].forEach(e => e.classList.remove('beforeStart'));

@@ -1,5 +1,7 @@
 import getPositions from './getPositions.js';
 
+// ----------------------------------------------------------------------------------------------
+// Get the ids
 const leftBow = document.querySelector("#leftBow");
 const leftFire = document.querySelector("#leftFire");
 const midBow = document.querySelector("#midBow");
@@ -8,6 +10,8 @@ const rightBow = document.querySelector("#rightBow");
 const rightFire = document.querySelector("#rightFire");
 const player = document.querySelector("#player");
 
+// ----------------------------------------------------------------------------------------------
+// Set initial postions got cannons, fire and possible player positions
 const positions = getPositions();
 leftBow.style.left = positions.leftBowPosition + "px";
 leftFire.style.left = positions.leftFirePosition + "px";
@@ -20,7 +24,8 @@ rightFire.style.left = positions.rightFirePosition + "px";
 
 player.style.left = positions.playerMidPosition + "px";
 
-// Code for toggleMenuBar
+// ----------------------------------------------------------------------------------------------
+// Code for toggleMenuBar. This hides the START button, leaderBoard, DarkMode toggler, Login/Logout button and unhides the STOP button and vice versa.
 
 const toggleMenuBar = document.querySelector('#toggleMenuBar');
 const stop = document.querySelector('#stop');

@@ -9,6 +9,11 @@ const signupHandler = document.getElementById('signupHandler');
 const createAccount = document.getElementById('createAccount');
 const alreadyHaveAccount = document.getElementById('alreadyHaveAccount');
 
+// Logs in or signs up an user by taking an email id and password
+// Username is the first part of the email id
+// Any failure during authentication is displayed using an error modal
+// Hide the login form when user tries to sign up and vise versa
+
 function loginOrSignup(event){
     event.preventDefault();
 
@@ -28,7 +33,7 @@ function loginOrSignup(event){
           return response.json();
         }
         else{
-          throw new Error("Failed");
+          throw new Error("Authentication Failed!");
         }
       })
       .then(data => {
@@ -37,7 +42,7 @@ function loginOrSignup(event){
         location.href = "../Points/showUserPoints.html";
       })
       .catch((e)=> {
-        const errorMessage = `<div style="text-align:center;position:absolute; top:40%;left:40%">Failed! </div>`
+        const errorMessage = `<div style="position:absolute; top:40%;left:40%"><p style="font-size:1.4vw;position:absolute;">Authentication Failed! </p></div>`
         displayModal(errorMessage, 'ErrorModal', 1500)}
         );
 }

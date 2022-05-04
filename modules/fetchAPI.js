@@ -1,3 +1,6 @@
+// Utility function that makes fetch call to the given url using the given method
+// Currently used for querying points, adding points.
+
 export default function fetchAPI(postRequestFunction){
 
     const satisfyFetchRequest = (requestConfig) =>{

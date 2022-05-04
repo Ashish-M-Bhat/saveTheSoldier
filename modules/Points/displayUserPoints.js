@@ -1,3 +1,5 @@
+// Called by getUserPoints
+// Using userPointsArray, it creates a table
 
 export default function displayUserPoints(userId, userPointsArray){
     const userPointsTableDiv = document.querySelector('#userPointsTableDiv');

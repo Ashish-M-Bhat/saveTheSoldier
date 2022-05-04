@@ -9,6 +9,10 @@ const start = document.querySelector("#start");
 const stop = document.querySelector("#stop");
 let startTime;
 
+// When start has been clicked, set startHasBeenClicked to true, load the bgMusic, hide the menu bar
+// Also load the remaining modules and then start the firing events
+// Hide the Start button and unhide the stop button
+
 start.addEventListener('click', function(event){
   startHasBeenClicked = true;
   const bgMusic = document.createElement('audio');
@@ -33,6 +37,11 @@ start.addEventListener('click', function(event){
   start.hidden=true;
 });
 
+// This function gets called when stop button is clicked
+// Hide some of the divs
+// Remove the event listerner for stop else, the event get triggered n no.of times by fireEvent
+// If user is logged In, log the points in the DB and reload the page
+// Else Reload here after 1s. Withing this 1s, display a modal that has the score listed
 
 function stopGame(){
 

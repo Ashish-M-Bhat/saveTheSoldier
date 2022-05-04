@@ -14,7 +14,6 @@ const leaderBoard = document.querySelector("#leaderBoard");
 // When window loads, check if darkMode was enabled last time. If yes, set the checkbox to true & dispatch the change event for the checkbox
 window.addEventListener('load', function(){
     if(localStorage.getItem('darkMode')){
-        console.log("Hit");
         darkModeToggle.checked = true;
         darkModeToggle.dispatchEvent(new Event('change'));
     }

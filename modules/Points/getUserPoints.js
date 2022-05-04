@@ -1,6 +1,8 @@
 import fetchAPI from "../fetchAPI.js";
 import displayUserPoints from "./displayUserPoints.js";
 
+// Gets all the points and then filters for the current user
+// Called by the showUserPoints.html page, on load
 (function getUserPoints (){
     const userId = localStorage.getItem('userId');
 

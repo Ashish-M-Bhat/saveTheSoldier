@@ -1,12 +1,13 @@
 import fetchAPI from "../fetchAPI.js";
 
-const displayLeaderBoard = (allUsersPointsArray) =>{
+// Creates a table using the top5UsersPointsArray array
+const displayLeaderBoard = (top5UsersPointsArray) =>{
     const leaderBoard = document.querySelector('#leaderBoard');
 
     let table = document.createElement('table');
     table.innerHTML = `<tr> <th> User </th> <th> Points </th> </tr>`;
 
-    allUsersPointsArray.forEach(eachpointEntry =>{
+    top5UsersPointsArray.forEach(eachpointEntry =>{
         const tr = document.createElement('tr');
         tr.innerHTML = `<td>${eachpointEntry.userId}</td><td>${eachpointEntry.points}</td>`;
         if(localStorage.getItem('userId') && localStorage.getItem('userId')=== eachpointEntry.userId)
@@ -16,7 +17,10 @@ const displayLeaderBoard = (allUsersPointsArray) =>{
 
     leaderBoard.appendChild(table);
 }
-(function getUserPoints (){
+
+// IIFE, that fetches all the points
+// The post fetch function then gets the top 5 points and then calls displayLeaderBoard
+(function getallUserPoints (){
 
     const transformData = (dataFromPointsDB) =>{
         let allUsersPointsArray = [];
@@ -24,8 +28,8 @@ const displayLeaderBoard = (allUsersPointsArray) =>{
             allUsersPointsArray.push(dataFromPointsDB[key]);
         }
         allUsersPointsArray.sort((a,b)=> b.points-a.points);
-        allUsersPointsArray = [...allUsersPointsArray.slice(0,5)];
-        displayLeaderBoard(allUsersPointsArray)
+        const top5UsersPointsArray = [...allUsersPointsArray.slice(0,5)];
+        displayLeaderBoard(top5UsersPointsArray)
 
     }
 

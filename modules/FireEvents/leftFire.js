@@ -2,6 +2,8 @@ import fireEvent from './fireEvent.js'
 
 var countOfLeftFires = 0, maxDelay=10, minDelay=0;
 
+// Responsible for firing the left most cannon
+// Calls fireEvent() by passing the id of the left cannon
 function triggerLeftFire() {
     countOfLeftFires = 0;
     let leftFire =document.querySelector("#leftFire");

@@ -5,13 +5,11 @@ table {
     border-collapse: collapse;
     background: linear-gradient(grey,silver,silver,grey);
     width:110%;
-    height:30px;
-
 }
 
 th,td{
     border:2px solid rgba(20, 20, 233, 0.493);
-    height:50px;
+    height:6vh;
     text-align: center;
     color:white;
 }

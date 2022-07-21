@@ -59,11 +59,18 @@ function stopGame(){
   else{
     setTimeout(() => {
       location.reload();
-    }, 1000);
+    }, 2000);
   }
 
   let htmlContent = `<div style="text-align:center;position:absolute; top:87px;left:225px">OUT! </div> <div style="text-align:center;position:absolute; top:200px;left:217px  "> Points: ` + points + `</div>`;
-  displayModal(htmlContent, 'DoneModal', 1000);
+
+  const htmlContentForModal = `
+  <div>
+    <h2>OUT!</h2>
+    <p> Your Points: ` + points + `</p>
+  </div>
+  `
+  displayModal(htmlContentForModal, 'DoneModal', 2000);
 }
 
 stop.addEventListener('click', stopGame);

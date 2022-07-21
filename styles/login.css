@@ -28,7 +28,7 @@ button{
     margin-bottom: 10%;
     margin: auto;
     width: 50%;
-    height: 50px;
+    height: 5vh;
     margin-top: 5%;
     margin-bottom: 10%;
     background-color: silver;
@@ -42,8 +42,8 @@ a{
     color:rgb(121, 28, 197);
 }
 button:hover{
-    width: 60%;
-    height:60px;
+    width: 55%;
+    height:6vh;
     background-color: rgb(165, 83, 231);
     color:white;
 }

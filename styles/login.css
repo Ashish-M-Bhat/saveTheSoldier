@@ -63,3 +63,15 @@ h1{
     font-size: 4vh;
     text-align: center;
   }
+
+  @media only screen and (max-width:1000px){
+    body{
+        background-color: black;
+    }
+    form{
+        top:35%;
+    }
+    button{
+        height: 30%;
+    }
+  }

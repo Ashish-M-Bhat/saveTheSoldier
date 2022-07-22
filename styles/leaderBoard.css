@@ -1,5 +1,4 @@
 table {
-    width:20%;
     position:relative;
     border: 3px solid rgb(217, 255, 0);
     border-collapse: collapse;
@@ -24,8 +23,16 @@ p{
     color:white;
 }
 .highlightCurrentUserOnLeaderBoard{
-    background-color: rgb(245, 0, 0);
+    background-color: rgb(126, 118, 118);
 }
 .highlightCurrentUserOnLeaderBoard:hover{
-    background-color: silver;
+    background-color: red;
+}
+
+@media only screen and (max-width:1000px){
+    table{
+        width:40vw;
+        font-size: 2em;
+    }
+
 }

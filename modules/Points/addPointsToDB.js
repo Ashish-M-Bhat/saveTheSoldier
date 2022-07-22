@@ -3,6 +3,7 @@ import fetchAPI from "../fetchAPI.js";
 const transformData = (data) => {
     console.log(data);
     location.reload();
+    setTimeout(()=>location.reload(), 1000);
 }
 
 // This is called after a game, only if the user is logged in

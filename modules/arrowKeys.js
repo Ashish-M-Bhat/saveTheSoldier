@@ -3,6 +3,7 @@ import getPositions from "./Positions/getPositions.js";
 // Adds functionality to move the player left or right
 // For moving left, user can click the keys 'a' or 'A' or the left arrow key or LMB(Left Mouse Button)
 // For moving right, user can click the keys 'd' or 'D' or the right arrow key or RMB(Right Mouse Button)
+// Also detects left and right swipes
 
 const player = document.querySelector("#player");
 
@@ -38,3 +39,24 @@ function movePlayerLeftOrRight(event){
 document.addEventListener('keydown',movePlayerLeftOrRight);
 document.addEventListener('click', movePlayerLeftOrRight);
 document.addEventListener('contextmenu', movePlayerLeftOrRight);
+
+  // Detect Left and right swipes
+  // For left swipe, dispatch LeftClick and for rightSwipe, dispatch rightClick
+{
+  let touchstartX = 0
+  let touchendX = 0
+
+  function checkDirection() {
+    if (touchendX < touchstartX) document.dispatchEvent(new Event('click'))
+    if (touchendX > touchstartX) document.dispatchEvent(new Event('contextmenu'))
+  }
+
+  document.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX
+  })
+
+  document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX
+    checkDirection()
+  })
+}

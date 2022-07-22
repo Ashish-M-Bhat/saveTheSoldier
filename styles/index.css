@@ -16,6 +16,7 @@ body.darkMode {
 
 #toggleMenuBar{
   margin-top: 4%;
+  margin-left:2%;
   height:3vh;
   background-color: transparent;
   cursor: pointer;
@@ -30,10 +31,10 @@ body.darkMode {
   position: absolute;
   top:20%;
   display: flex;
-  width:8%;
+  width:auto;
   flex-flow: column;
   justify-content: space-around;
-  align-items: space-around;
+  align-items: center;
 }
 .menuBarItems{
   margin-bottom: 15%;
@@ -59,9 +60,6 @@ body.darkMode {
 label{
   cursor:grab;
 }
-#start,#stop, #login{
-  width:80%;
-}
 
 #DoneModal{
   position:absolute;
@@ -79,3 +77,35 @@ label{
   align-items:center
 }
 
+@media screen and (max-width:1000px) {
+  body{
+    width: 99vw;
+    height: 99vh;
+    background-size: cover;
+    background-position: center, center;
+  }
+  body.darkMode {
+    background-color: black;
+    width: 99vw;
+    height: 99vh;
+    background-size: cover;
+    background-position: center, center;
+  }
+  #toggleMenuBar{
+    margin-top: 20%;
+    margin-left:5%;
+  }
+  #menuBar{
+    margin-left:30%;
+  }
+  .menuBarItems{
+    color: blue;
+    border-radius: 50%;
+    height:4vh;
+    width:12vw;
+  }
+  input{
+    margin-left: 1.5vw;
+  }
+
+}

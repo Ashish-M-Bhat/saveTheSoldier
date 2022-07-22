@@ -99,9 +99,9 @@ label{
     margin-left:30%;
   }
   .menuBarItems{
-    color: blue;
+    color: black;
     font-size: large;
-    font-weight: bold;
+    font-weight:bolder;
     border-radius: 50%;
     height:4vh;
     width:12vw;

@@ -42,8 +42,11 @@ function loginOrSignup(event){
         location.href = "../Points/showUserPoints.html";
       })
       .catch((e)=> {
-        const errorMessage = `<div style="position:absolute; top:40%;left:40%"><p style="font-size:1.4vw;position:absolute;">Authentication Failed! </p></div>`
-        displayModal(errorMessage, 'ErrorModal', 1500)}
+        const errorMessage = `
+        <div id="errorModal">
+          <p>Authentication Failed! </p>
+        </div>`
+        displayModal(errorMessage, 'errorModal', 1500)}
         );
 }
 

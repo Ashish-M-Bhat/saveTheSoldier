@@ -40,9 +40,12 @@
   <audio src="styles/codmw.mp3" loop id="backgroundMusic"></audio>
 
   <script>
-  window.onload = () => backgroundMusic.play();
+  window.onload = () => backgroundMusic.play().catch(err => console.log(err));
   // TODO: Throttling/Debouncing
-   window.addEventListener('resize', ()=> {location.reload()});
+  // Reload only for PC
+  if(window.innerHeight < window.innerWidth) {
+    window.addEventListener('resize', ()=> {location.reload()});
+  }
    var startHasBeenClicked = false;
 
 </script>

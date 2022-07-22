@@ -4,6 +4,7 @@ import triggerMidFire from './modules/FireEvents/midFire.js'
 import displayModal from './modules/displayModal.js';
 import addPointsToDB from './modules/Points/addPointsToDB.js';
 import loadModulesonStart from './modules/scriptLoaders/loadModulesOnStart.js';
+import isMobileDevice from './modules/isMobileDevice.js';
 
 const start = document.querySelector("#start");
 const stop = document.querySelector("#stop");
@@ -32,8 +33,10 @@ start.addEventListener('click', function(event){
   setTimeout(()=> triggerMidFire(), (Math.random()*1000)+11);
   setTimeout(()=>triggerRightFire(), Math.random()*1000+5);
 
-  // Unhide the STOP button & Hide the START button
-  stop.hidden=false;
+  // Unhide the STOP button (only if not mobile) & Hide the START button
+  if(!isMobileDevice()){
+    stop.hidden=false;
+  }
   start.hidden=true;
 });
 
@@ -61,8 +64,6 @@ function stopGame(){
       location.reload();
     }, 2000);
   }
-
-  let htmlContent = `<div style="text-align:center;position:absolute; top:87px;left:225px">OUT! </div> <div style="text-align:center;position:absolute; top:200px;left:217px  "> Points: ` + points + `</div>`;
 
   const htmlContentForModal = `
   <div>

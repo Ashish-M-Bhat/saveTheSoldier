@@ -1,3 +1,4 @@
+import isMobileDevice from '../isMobileDevice.js';
 import getPositions from './getPositions.js';
 
 // ----------------------------------------------------------------------------------------------
@@ -39,8 +40,10 @@ toggleMenuBar.addEventListener('click', function(event){
         for(let eachElementToBeHidden of menuBar.children){
             // If start was clicked, make the stop button visible & hide the toggleMenuBar button
             if(startHasBeenClicked){
-                stop.hidden=false;
-                stop.style.marginTop= '25vh';
+                if(!isMobileDevice()){
+                    stop.hidden=false;
+                    stop.style.marginTop= '25vh';
+                }
                 toggleMenuBar.hidden = true;
             }
             if(eachElementToBeHidden !== stop)

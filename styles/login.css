@@ -51,7 +51,7 @@ h1{
     text-align: center;
     color:white;
 }
-#ErrorModal{
+#errorModal{
     position:absolute;
     top:22%;
     left:35%;
@@ -63,7 +63,11 @@ h1{
     font-size: 4vh;
     text-align: center;
   }
-
+#errorModal p{
+    position: absolute;
+    top:10%;
+    font-size:1.4vw;
+}
   @media only screen and (max-width:1000px){
     body{
         background-color: black;
@@ -73,5 +77,19 @@ h1{
     }
     button{
         height: 30%;
+    }
+    #errorModal{
+        top:33%;
+        left:30%;
+        height: 25%;
+        width: 45%;
+    }
+    #errorModal p{
+        top:50%;
+        font-size: 2vw;
+    }
+    button:hover{
+        width: 60%;
+        height: 40%;
     }
   }

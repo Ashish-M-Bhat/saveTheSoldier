@@ -100,12 +100,24 @@ label{
   }
   .menuBarItems{
     color: blue;
+    font-size: large;
+    font-weight: bold;
     border-radius: 50%;
     height:4vh;
     width:12vw;
   }
   input{
+    position:relative;
+    top:0.5vh;
     margin-left: 1.5vw;
   }
-
+  label{
+    margin-bottom:3vh;
+  }
+  #DoneModal{
+    height:40%;
+    width:60%;
+    margin-left: 20%;
+    margin-top: 30%;
+  }
 }

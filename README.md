@@ -63,3 +63,12 @@ Features:
 
 ![Screenshot (77)](https://user-images.githubusercontent.com/61205415/180303393-c666fd15-5d89-46f2-a6cf-a11c7c680737.png)
 
+                                                     Mobile device 
+![image](https://user-images.githubusercontent.com/61205415/180734635-65186d2e-60bc-4ece-96a8-e565850afd12.png)
+
+
+                                                     Mobile Device with Dark Mode
+
+![image](https://user-images.githubusercontent.com/61205415/180734721-80cad135-5c39-4400-bccc-4e02717e65cb.png)
+
+

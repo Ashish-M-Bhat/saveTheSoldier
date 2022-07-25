@@ -7,16 +7,23 @@ Use the controls to move the player.
     Controls:
 
 
-    Move Left:  Left arrow key / 'a' / 'A' / LMB
+    Move Left:  Left arrow key / 'a' / 'A' / LMB / Left Swipe 
                                                       
-    Move Right: Right arrow key / 'd' / 'D' / RMB
+    Move Right: Right arrow key / 'd' / 'D' / RMB / Right Swipe
 
 Features:
-Anyone can start playing as a guest, no need to log in.
-Logging in gives up the additional functionality of entering the Leader Board.
-Top 5 points are shown in the Leader Board.
-One can signup using an email id. Once the user signs up or is logged in, the points history could be viewed.
-Any user can view the leaderboard. If the current logged user is in the leaderboard, the entry is highlighted.
+
+                        - Anyone can start playing as a guest, no need to log in.
+
+                        - Logging in gives up the additional functionality of entering the Leader Board.
+
+                        - Top 5 points are shown in the Leader Board.
+
+                        - One can signup using an email id. Once the user signs up or is logged in, the points history could be viewed.
+
+                        - Any user can view the leaderboard. If the current logged user is in the leaderboard, the entry is highlighted.
+
+                        - Supports mobile devices as well
 
 
                                                       Home Page

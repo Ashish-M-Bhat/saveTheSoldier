@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url("./bow.css");
 @import url("./fire.css");
 @import url("./player.css");
@@ -6,6 +7,7 @@
 body {
     background-image:  url("images/forest-background.jpg");
     color:blue;
+    font-family: 'Poppins', sans-serif;
 }
 
 body.darkMode {

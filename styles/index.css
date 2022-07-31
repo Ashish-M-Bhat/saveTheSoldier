@@ -1,86 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url("./bow.css");
-@import url("./fire.css");
-@import url("./player.css");
-@import url("./leaderBoard.css");
-
+@import "https://fonts.googleapis.com/css2?family=Poppins&display=swap";
+@import "./bow.css";
+@import "./fire.css";
+@import "./player.css";
+@import "./leaderBoard.css";
 body {
-    background-image:  url("images/forest-background.jpg");
-    color:blue;
-    font-family: 'Poppins', sans-serif;
+  background-image: url("images/forest-background.jpg");
+  color: blue;
+  font-family: "Poppins", sans-serif;
 }
 
 body.darkMode {
-  background-image:  url("images/darkBackground.jpg");
+  background-image: url("images/darkBackground.jpg");
   background-repeat: no-repeat;
-  background-size:100%;
+  background-size: 100%;
 }
 
-#toggleMenuBar{
+#toggleMenuBar {
   margin-top: 4%;
-  margin-left:2%;
-  height:3vh;
+  margin-left: 2%;
+  height: 3vh;
   background-color: transparent;
   cursor: pointer;
-  color:blue;
+  color: blue;
   border: 1px solid transparent;
   font-size: 4vh;
 }
-#toggleMenuBar:hover{
+#toggleMenuBar:hover {
   color: white;
 }
-#menuBar{
+
+#menuBar {
   position: absolute;
-  top:20%;
+  top: 20%;
   display: flex;
-  width:auto;
+  width: auto;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
 }
-.menuBarItems{
+
+.menuBarItems {
   margin-bottom: 15%;
-  height:4vh;
-  background: linear-gradient(grey,silver,grey);
-  transition: all .6s cubic-bezier(.19,1,.22,1);
+  height: 4vh;
+  background: linear-gradient(grey, silver, grey);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
-  width:6.6vw;
-  color:white;
+  width: 6.6vw;
+  color: white;
 }
-.menuBarItems:hover{
-  width:80%;
-  height:5vh;
+.menuBarItems:hover {
+  width: 80%;
+  height: 5vh;
   margin-left: 0.5vh;
   margin-top: 1vh;
 }
 
-#darkModeToggle{
-  cursor:pointer;
+#darkModeToggle {
+  cursor: pointer;
   width: 3vw;
   height: 2vh;
 }
-label{
-  cursor:grab;
+
+label {
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
-#DoneModal{
-  position:absolute;
+#DoneModal {
+  position: absolute;
   background-image: radial-gradient(circle, red, yellow, red);
-  height:30%;
-  width:30%;
+  height: 30%;
+  width: 30%;
   margin-left: 35%;
   margin-top: 15%;
-  color:white;
+  color: white;
   text-align: center;
-
-  display:flex;
-  flex-flow:column;
-  justify-content:space-around;
-  align-items:center
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@media screen and (max-width:1000px) {
-  body{
+@media screen and (max-width: 1500px) {
+  body {
     width: 99vw;
     height: 99vh;
     background-size: cover;
@@ -93,33 +95,33 @@ label{
     background-size: cover;
     background-position: center, center;
   }
-  #toggleMenuBar{
+  #toggleMenuBar {
     margin-top: 20%;
-    margin-left:5%;
+    margin-left: 5%;
   }
-  #menuBar{
-    margin-left:30%;
+  #menuBar {
+    margin-left: 30%;
   }
-  .menuBarItems{
+  .menuBarItems {
     color: black;
     font-size: large;
-    font-weight:bolder;
+    font-weight: bolder;
     border-radius: 50%;
-    height:4vh;
-    width:12vw;
+    height: 4vh;
+    width: 12vw;
   }
-  input{
-    position:relative;
-    top:0.5vh;
+  input {
+    position: relative;
+    top: 0.5vh;
     margin-left: 1.5vw;
   }
-  label{
-    margin-bottom:3vh;
+  label {
+    margin-bottom: 3vh;
   }
-  #DoneModal{
-    height:40%;
-    width:60%;
+  #DoneModal {
+    height: 40%;
+    width: 60%;
     margin-left: 20%;
     margin-top: 30%;
   }
-}
+}/*# sourceMappingURL=index.css.map */

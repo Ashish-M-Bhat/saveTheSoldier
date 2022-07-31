@@ -1,38 +1,49 @@
 table {
-    position:relative;
-    border: 3px solid rgb(217, 255, 0);
-    border-collapse: collapse;
-    background: linear-gradient(grey,silver,silver,grey);
-    width:110%;
+  position: relative;
+  border: 3px solid rgb(217, 255, 0);
+  border-collapse: collapse;
+  background: linear-gradient(grey, silver, silver, grey);
+  width: 110%;
 }
 
-th,td{
-    border:2px solid rgba(20, 20, 233, 0.493);
-    height:6vh;
-    text-align: center;
-    color:white;
-}
-tr:hover {background-color: grey;}
-p{
-    position: relative;
-    left: 7.5%;
-    font-size: 3vh;
+th {
+  border: 2px solid rgba(20, 20, 233, 0.493);
+  height: 6vh;
+  text-align: center;
+  color: white;
 }
 
-.darkMode{
-    color:white;
-}
-.highlightCurrentUserOnLeaderBoard{
-    background-color: rgb(126, 118, 118);
-}
-.highlightCurrentUserOnLeaderBoard:hover{
-    background-color: red;
+td {
+  border: 2px solid rgba(20, 20, 233, 0.493);
+  height: 6vh;
+  text-align: center;
+  color: white;
 }
 
-@media only screen and (max-width:1000px){
-    table{
-        width:40vw;
-        font-size: 2em;
-    }
-
+tr:hover {
+  background-color: grey;
 }
+
+p {
+  position: relative;
+  left: 7.5%;
+  font-size: 3vh;
+}
+
+.darkMode {
+  color: white;
+}
+
+.highlightCurrentUserOnLeaderBoard {
+  background-color: rgb(126, 118, 118);
+}
+.highlightCurrentUserOnLeaderBoard:hover {
+  background-color: red;
+}
+
+@media only screen and (max-width: 1000px) {
+  table {
+    width: 40vw;
+    font-size: 2em;
+  }
+}/*# sourceMappingURL=leaderBoard.css.map */

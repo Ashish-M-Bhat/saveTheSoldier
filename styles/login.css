@@ -1,95 +1,100 @@
-body{
-    background-color: silver;
+body {
+  background-color: silver;
 }
 
-form{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    border: 30px solid rgb(72, 9, 124);
-    width:25%;
-    margin: auto;
-
-    position: absolute;
-    top:22%;
-    left:35%;
-    background-color: rgb(72, 9, 124);
-    border-radius: 10px;
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: 30px solid rgb(72, 9, 124);
+  width: 25%;
+  margin: auto;
+  position: absolute;
+  top: 22%;
+  left: 35%;
+  background-color: rgb(72, 9, 124);
+  border-radius: 10px;
 }
 
-input,button{
-    padding: 8px;
-    margin: 5%;
+input {
+  padding: 8px;
+  margin: 5%;
 }
-button{
-    cursor: pointer;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    margin: auto;
-    width: 50%;
-    height: 5vh;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    background-color: silver;
-    color:rgb(121, 28, 197);
+
+button {
+  padding: 8px;
+  margin: 5%;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  margin: auto;
+  width: 50%;
+  height: 5vh;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  background-color: silver;
+  color: rgb(121, 28, 197);
 }
-a{
-    font-size: large;
-    text-decoration: none;
-    margin: auto;
-    border: 1px solid rgb(72, 9, 124);
-    color:rgb(121, 28, 197);
+button:hover {
+  width: 55%;
+  height: 6vh;
+  background-color: rgb(165, 83, 231);
+  color: white;
 }
-button:hover{
-    width: 55%;
-    height:6vh;
-    background-color: rgb(165, 83, 231);
-    color:white;
+
+a {
+  font-size: large;
+  text-decoration: none;
+  margin: auto;
+  border: 1px solid rgb(72, 9, 124);
+  color: rgb(121, 28, 197);
 }
-h1{
-    text-align: center;
-    color:white;
+
+h1 {
+  text-align: center;
+  color: white;
 }
-#errorModal{
-    position:absolute;
-    top:22%;
-    left:35%;
-    background-color:red;
-    border-radius: 10px;
-    height:48%;
-    width:28.4%;
-    color:white;
-    font-size: 4vh;
-    text-align: center;
+
+#errorModal {
+  position: absolute;
+  top: 22%;
+  left: 35%;
+  background-color: red;
+  border-radius: 10px;
+  height: 48%;
+  width: 28.4%;
+  color: white;
+  font-size: 4vh;
+  text-align: center;
+}
+#errorModal p {
+  position: absolute;
+  top: 10%;
+  font-size: 1.4vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    background-color: black;
   }
-#errorModal p{
-    position: absolute;
-    top:10%;
-    font-size:1.4vw;
-}
-  @media only screen and (max-width:1000px){
-    body{
-        background-color: black;
-    }
-    form{
-        top:35%;
-    }
-    button{
-        height: 30%;
-    }
-    #errorModal{
-        top:33%;
-        left:30%;
-        height: 25%;
-        width: 45%;
-    }
-    #errorModal p{
-        top:50%;
-        font-size: 2vw;
-    }
-    button:hover{
-        width: 60%;
-        height: 40%;
-    }
+  form {
+    top: 35%;
   }
+  button {
+    height: 30%;
+  }
+  button:hover {
+    width: 60%;
+    height: 40%;
+  }
+  #errorModal {
+    top: 33%;
+    left: 30%;
+    height: 25%;
+    width: 45%;
+  }
+  #errorModal p {
+    top: 50%;
+    font-size: 2vw;
+  }
+}/*# sourceMappingURL=login.css.map */

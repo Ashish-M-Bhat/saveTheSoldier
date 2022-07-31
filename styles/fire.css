@@ -1,24 +1,29 @@
-.fire{
+.fire {
   height: 4vh;
   width: 4vh;
   background-image: radial-gradient(circle, gold 10%, red 60%);
   border-radius: 50%;
 }
-#leftFire{
+
+#leftFire {
   position: absolute;
-  top:1%;
+  top: 1%;
 }
-#midFire{
+
+#midFire {
   position: absolute;
-  top:1%;
+  top: 1%;
 }
-#rightFire{
+
+#rightFire {
   position: absolute;
-  top:1%;
+  top: 1%;
 }
-img.beforeStart{
+
+img.beforeStart {
   opacity: 0.5;
 }
-div.beforeStart{
+
+div.beforeStart {
   opacity: 0;
-}
+}/*# sourceMappingURL=fire.css.map */

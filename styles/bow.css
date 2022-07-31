@@ -1,12 +1,14 @@
-#leftBow{
-    position: absolute;
-    top:0;
-  }
-  #midBow{
-    position: absolute;
-    top:0;
-  }
-  #rightBow{
-    position: absolute;
-    top:0;
-  }
+#leftBow {
+  position: absolute;
+  top: 0;
+}
+
+#midBow {
+  position: absolute;
+  top: 0;
+}
+
+#rightBow {
+  position: absolute;
+  top: 0;
+}/*# sourceMappingURL=bow.css.map */
